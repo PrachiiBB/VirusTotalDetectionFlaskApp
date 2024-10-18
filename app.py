@@ -95,7 +95,7 @@ def index():
         analysis_details['malicious_count'] = malicious_count
         analysis_details['summary'] = (
             f"{malicious_count} antivirus found the given file malicious !!"
-            if malicious_count != 0 else "No antivirus found the given file malicious !!"
+            if malicious_count != 0 else "No antivirus found the file malicious"
         )
 
         return render_template('result.html', analysis_details=analysis_details)
@@ -104,4 +104,3 @@ def index():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
-
