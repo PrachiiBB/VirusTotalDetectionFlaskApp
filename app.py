@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # VirusTotal API and URL
 url = 'https://www.virustotal.com/vtapi/v2/file/scan'
-api_key = "a1d996b2dc6806d59cec04293efb8180c65f905aa3d49bd87ce2c15a4873a18e"
+api_key = open("vt-api.txt","r").read().strip()
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
